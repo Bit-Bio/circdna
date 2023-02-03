@@ -1,6 +1,6 @@
 process CIRCLEFINDER {
     tag "$meta.id"
-    label 'process_low'
+    label 'process_medium'
     //Test adding a containerhere
     conda (params.enable_conda ? 'bioconda::unicycler=0.5.0=py39h2add14b_1' : null)
     container "${ workflow.containerEngine == 'singularity' && !task.ext.singularity_pull_docker_container ?
